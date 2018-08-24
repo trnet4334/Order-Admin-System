@@ -3,23 +3,25 @@
 
 <head>
     <!-- Search Engine -->
-    <meta name="description" content="the F2E - 後台介面">
-    <meta name="image" content="https://kakadodo.github.io/theF2EChallange/img/week3.jpg">
+    <meta name="description" content="Order admin system">
+    <meta name="image" content=".source/img/weeks.jpg">
+
     <!-- Schema.org for Google -->
-    <meta itemprop="name" content="Week 3 - Admin Order">
-    <meta itemprop="description" content="the F2E - 後台介面">
-    <meta itemprop="image" content="https://kakadodo.github.io/theF2EChallange/img/week3.jpg">
+    <meta itemprop="name" content="Admin Order">
+    <meta itemprop="description" content="tOrder admin system">
+    <meta itemprop="image" content=".source/img/weeks.jpg">
+
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta property="og:title" content="Week 3 - Admin Order">
-    <meta property="og:description" content="the F2E - 後台介面">
-    <meta property="og:image" content="https://kakadodo.github.io/theF2EChallange/img/week3.jpg">
-    <meta property="og:url" content="https://kakadodo.github.io/theF2EChallange/admin-order.html">
-    <meta property="og:site_name" content="Week 3 - Admin Order">
-    <meta property="og:locale" content="zh_TW">
-    <meta property="fb:admins" content="1420062581">
-    <meta property="fb:app_id" content="333459487173924">
+    <meta property="og:title" content="Admin Order">
+    <meta property="og:description" content="Order admin system">
+    <meta property="og:image" content=".source/img/weeks.jpg">
+    <meta property="og:url" content="https://trnet4334.github.io/Order-Admin-System/index.html">
+    <meta property="og:site_name" content="Admin Order">
     <meta property="og:type" content="website">
-    <title>Week 3 - Admin Order</title>
+
+    <title>Admin Order</title>
+
+    <!-- CSS stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.2/c3.min.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -29,8 +31,8 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-        <div class="container"><a class="navbar-brand font-weight-bold mr-5" href="#">Shoptime</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container"><a class="navbar-brand font-weight-bold mr-5" href="#home">Shoptime</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav mr-auto font-weight-bold">
@@ -38,15 +40,29 @@
                     <li class="nav-item"><a class="nav-link px-3" href="#order">ORDERS</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="#product">PRODUCT</a></li>
                 </ul>
-                <h6 class="text-white">ADMIN</h6>
+                <a href="#" class="text-white" style="font-weight: bold; padding-right: 15px;">ADMIN</a>
             </div>
         </div>
     </nav>
+    <!-- Home section -->
     <div class="js_mainContent container mt-4" id="home">
         <div class="d-flex align-items-center mb-2">
             <h4 class="font-weight-bold mr-auto">OVERVIEW</h4>
-            <div class="date_select d-flex align-items-center"><span>2018/06/18</span><i class="fas fa-caret-right px-2"></i><span>2018/06/24</span><a class="dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Weekly</a>
-                <div class="dropdown-menu text-center"><a class="dropdown-item" href="#">Daily</a><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly</a><a class="dropdown-item" href="#">Yearly</a><a class="dropdown-item" href="#">Custom</a></div></a></div>
+            <div class="date_select d-flex align-items-center">
+                <span>2018/06/18</span><i class="fas fa-caret-right px-2"></i><span>2018/06/24</span>
+                <a class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" style="color: #000;" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Period
+                    </a>
+                    <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Daily</a>
+                        <a class="dropdown-item" href="#">Weekly</a>
+                        <a class="dropdown-item" href="#">Monthly</a>
+                        <a class="dropdown-item" href="#">Yearly</a>
+                        <a class="dropdown-item" href="#">Custom</a>
+                    </div>
+                </a>
+            </div>
         </div>
         <div class="row">
             <div class="col-4">
@@ -149,6 +165,7 @@
             </div>
         </div>
     </div>
+    <!-- Order section -->
     <div class="js_mainContent container mt-4 d-none" id="order">
         <div class="d-flex align-items-center">
             <input class="order_check ml-2" type="checkbox" name=""/>
@@ -157,7 +174,7 @@
             </div>
             <div class="tip_wrapper ml-4"><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#000"><i class="fas fa-tags"></i></a>
                 <div class="dropdown-menu">
-                    <h6 class="dropdown-header">Change Status to…</h6><a class="dropdown-item" href="#">Paid</a><a class="dropdown-item" href="#">Unpaid</a><a class="dropdown-item" href="#">Shipping</a><a class="dropdown-item" href="#">Done</a>
+                    <h6 class="dropdown-header">Change Status</h6><a class="dropdown-item" href="#">Paid</a><a class="dropdown-item" href="#">Unpaid</a><a class="dropdown-item" href="#">Shipping</a><a class="dropdown-item" href="#">Done</a>
                 </div>
             </div>
             <div class="ml-auto"><a class="dropdown-toggle font-weight-bold" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#000">EDIT SECTION</a>
@@ -377,6 +394,7 @@
             </ul>
         </nav>
     </div>
+    <!-- Product section -->
     <div class="js_mainContent container mt-4 d-none" id="product">
         <div class="d-flex align-items-center">
             <input class="order_check ml-2" type="checkbox" name=""/>
@@ -660,9 +678,9 @@
 <footer><i class="fas fa-pen-square"></i><span> Built by Steven Yu</span></footer>
 </body>
 
-<script src="./js/vendors.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.2/c3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

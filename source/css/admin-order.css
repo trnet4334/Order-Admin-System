@@ -3,6 +3,7 @@ body {
 }
 
 /* Bootstrap customized */
+
 .dropdown-item:hover, .dropdown-item:focus {
     color: #fff;
     background-color: #000;
@@ -56,7 +57,7 @@ body {
 }
 
 .date_select span {
-    color: #f2f2f2;
+    color: #160d10;
     font-weight: bold;
 }
 
@@ -86,11 +87,12 @@ body {
 }
 
 .c3-axis {
-    fill: #f2f2f2;
+    fill: #0c0933;
 }
 
 .c3 path, .tick line {
     stroke: none;
+    stroke-width: 2px;
 }
 
 /* Transaction website */
@@ -99,7 +101,7 @@ body {
 }
 
 .lists_group .text_gray {
-    color: #f2f2f2;
+    color: #0a0305;
 }
 
 .lists_group .text_black {
@@ -167,7 +169,7 @@ body {
 }
 
 .order_info .time, .order_info .buyer {
-    color: #f2f2f2;
+    color: #09040a;
 }
 
 .order_check {
@@ -211,10 +213,14 @@ body {
 }
 
 footer {
-    padding: 20px 0;
+    padding: 10px 0;
+    margin: 20px 0 0 0;
     width: 100%;
     text-align: center;
-    color: #f2f2f2;
+    font-style: italic;
+    font-size: 18px;
+    background-color: rgba(37, 33, 38, 0.9);
+    color: #e7f5ff;
     letter-spacing: 1px;
 }
 
