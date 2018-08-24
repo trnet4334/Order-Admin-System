@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Search Engine -->
+    <meta name="description" content="the F2E - 後台介面">
+    <meta name="image" content="https://kakadodo.github.io/theF2EChallange/img/week3.jpg">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="Week 3 - Admin Order">
+    <meta itemprop="description" content="the F2E - 後台介面">
+    <meta itemprop="image" content="https://kakadodo.github.io/theF2EChallange/img/week3.jpg">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta property="og:title" content="Week 3 - Admin Order">
+    <meta property="og:description" content="the F2E - 後台介面">
+    <meta property="og:image" content="https://kakadodo.github.io/theF2EChallange/img/week3.jpg">
+    <meta property="og:url" content="https://kakadodo.github.io/theF2EChallange/admin-order.html">
+    <meta property="og:site_name" content="Week 3 - Admin Order">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="fb:admins" content="1420062581">
+    <meta property="fb:app_id" content="333459487173924">
+    <meta property="og:type" content="website">
+    <title>Week 3 - Admin Order</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.2/c3.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./source/css/admin-order.css"/>
+    <link rel="stylesheet" href="./source/css/c3.css"/>
+
+</head>
+<body>
+<div id="app">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container"><a class="navbar-brand font-weight-bold mr-5" href="#">Shoptime</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mr-auto font-weight-bold">
+                    <li class="nav-item active"><a class="nav-link px-3" href="#home">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#order">ORDERS</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#product">PRODUCT</a></li>
+                </ul>
+                <h6 class="text-white">ADMIN</h6>
+            </div>
+        </div>
+    </nav>
+    <div class="js_mainContent container mt-4" id="home">
+        <div class="d-flex align-items-center mb-2">
+            <h4 class="font-weight-bold mr-auto">OVERVIEW</h4>
+            <div class="date_select d-flex align-items-center"><span>2018/06/18</span><i class="fas fa-caret-right px-2"></i><span>2018/06/24</span><a class="dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Weekly</a>
+                <div class="dropdown-menu text-center"><a class="dropdown-item" href="#">Daily</a><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly</a><a class="dropdown-item" href="#">Yearly</a><a class="dropdown-item" href="#">Custom</a></div></a></div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h6 class="card-title"><i class="fas fa-hand-holding-usd mr-2"></i>TOTAL REVENUE</h6>
+                        <p class="card-text text-gogreen">54,540</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h6 class="card-title"><i class="fas fa-boxes mr-2"></i>TOTAL COST</h6>
+                        <p class="card-text text-danger">12,660</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h6 class="card-title"><i class="fas fa-money-bill mr-2"></i>NET INCOME</h6>
+                        <p class="card-text text-primary">41,880</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="font-weight-bold">Activity</h4>
+                        <div id="chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body pb-0">
+                        <h4 class="font-weight-bold">Transaction Website</h4>
+                        <ul class="lists_group list-unstyled">
+                            <li class="d-flex align-items-center py-3"><i class="fab fa-facebook-square fa-3x mr-3"></i><span class="mr-auto text_gray">Facebook.com</span><span class="mr-3 text_black">45,836</span>
+                                <div class="tip_wrapper success" tabindex="0"><i class="fas fa-arrow-up mr-1"></i><span>20%</span>
+                                    <div class="tip text-center"><span>INCREASE<span class="success px-1">899</span>VIEWS</span><small>last week: 44,937</small></div>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center py-3"><i class="fab fa-google fa-3x mr-3"></i><span class="mr-auto text_gray">Google.com</span><span class="mr-3 text_black">23,582</span>
+                                <div class="tip_wrapper success" tabindex="0"><i class="fas fa-arrow-up mr-1"></i><span>23%</span>
+                                    <div class="tip text-center"><span>INCREASE<span class="success px-1">1,024</span>VIEWS</span><small>last week: 54,037</small></div>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center py-3"><i class="fas fa-shopping-bag fa-3x mr-3"></i><span class="mr-auto text_gray">Shopify.com</span><span class="mr-3 text_black">24,58</span>
+                                <div class="tip_wrapper text-danger" tabindex="0"><i class="fas fa-arrow-down mr-1"></i><span>15%</span>
+                                    <div class="tip text-center"><span>DECREASE<span class="text-danger px-1">508</span>VIEWS</span><small>last week: 25,085</small></div>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center py-3"><i class="fab fa-wordpress fa-3x mr-3"></i><span class="mr-auto text_gray">Wordpress.com</span><span class="mr-3 text_black">1,057</span>
+                                <div class="tip_wrapper text-danger" tabindex="0"><i class="fas fa-arrow-up mr-1"></i><span>30%</span>
+                                    <div class="tip text-center"><span>DECREASE<span class="text-danger px-1">385</span>VIEWS</span><small>last week: 620</small></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-3 mt-lg-0">
+                <div class="card">
+                    <div class="card-body pb-0">
+                        <h4 class="font-weight-bold">Latest Orders</h4>
+                        <ul class="lists_group list-unstyled">
+                            <li class="d-flex align-items-end py-3"><img src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="100"/>
+                                <div class="order_info ml-2">
+                                    <h5 class="font-weight-bold">Vintage T-shirt</h5>
+                                    <div class="time"><i class="fas fa-clock fa-fw mr-2"></i>2018/6/13  13:42</div>
+                                    <div class="buyer"><i class="fas fa-male fa-fw mr-2"></i>Belle Willis</div>
+                                </div>
+                                <div class="order_price text-right ml-auto">Total<strong class="d-block">3,200</strong></div>
+                            </li>
+                            <li class="d-flex align-items-end py-3"><img src="https://ae01.alicdn.com/kf/HTB1cRVQSVXXXXcwXpXXq6xXFXXXI/Jackets-Men-Winter-Denim-Jacket-Mens-Fashion-Thick-Cotton-Cowboy-Jeans-Jacket-Jaqueta-Masculino-Military-Tactical.jpg_640x640.jpg" width="100"/>
+                                <div class="order_info ml-2">
+                                    <h5 class="font-weight-bold">Cowboy Jacket</h5>
+                                    <div class="time"><i class="fas fa-clock fa-fw mr-2"></i>2018/6/13  10:45</div>
+                                    <div class="buyer"><i class="fas fa-male fa-fw mr-2"></i>Adrian Cummings</div>
+                                </div>
+                                <div class="order_price text-right ml-auto">Total<strong class="d-block">2,800</strong></div>
+                            </li>
+                            <li class="d-flex align-items-end py-3"><img src="https://img3.cohimg.net/is/image/Coach/86636_nav_a0?fmt=jpeg&amp;wid=360&amp;hei=452&amp;qlt=80,0&amp;op_sharpen=0&amp;resMode=bicub&amp;op_usm=5,0.2,0,0&amp;iccEmbed=0&amp;fit=vfit" width="100"/>
+                                <div class="order_info ml-2">
+                                    <h5 class="font-weight-bold">Coach Coat</h5>
+                                    <div class="time"><i class="fas fa-clock fa-fw mr-2"></i>2018/6/13  8:26</div>
+                                    <div class="buyer"><i class="fas fa-male fa-fw mr-2"></i>Lura Holland</div>
+                                </div>
+                                <div class="order_price text-right ml-auto">Total<strong class="d-block">1,600</strong></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="js_mainContent container mt-4 d-none" id="order">
+        <div class="d-flex align-items-center">
+            <input class="order_check ml-2" type="checkbox" name=""/>
+            <div class="dropdown show"><a class="dropdown-toggle ml-1" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#000"></a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="#">Select All</a><a class="dropdown-item" href="#">Unselect All</a><a class="dropdown-item" href="#">Paid</a><a class="dropdown-item" href="#">Unpaid</a><a class="dropdown-item" href="#">Shipping</a><a class="dropdown-item" href="#">Done</a></div>
+            </div>
+            <div class="tip_wrapper ml-4"><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#000"><i class="fas fa-tags"></i></a>
+                <div class="dropdown-menu">
+                    <h6 class="dropdown-header">Change Status to…</h6><a class="dropdown-item" href="#">Paid</a><a class="dropdown-item" href="#">Unpaid</a><a class="dropdown-item" href="#">Shipping</a><a class="dropdown-item" href="#">Done</a>
+                </div>
+            </div>
+            <div class="ml-auto"><a class="dropdown-toggle font-weight-bold" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#000">EDIT SECTION</a>
+                <div class="dropdown-menu pl-3 font-weight-bold">
+                    <div class="check_group">
+                        <input class="order_check" type="checkbox" name=""/>
+                        <label>Order ID</label>
+                    </div>
+                    <div class="check_group">
+                        <input class="order_check" type="checkbox" name=""/>
+                        <label>Customer</label>
+                    </div>
+                    <div class="check_group">
+                        <input class="order_check" type="checkbox" name=""/>
+                        <label>Product List</label>
+                    </div>
+                    <div class="check_group">
+                        <input class="order_check" type="checkbox" name=""/>
+                        <label>Total</label>
+                    </div>
+                    <div class="check_group">
+                        <input class="order_check" type="checkbox" name=""/>
+                        <label>Add to Cart</label>
+                    </div>
+                    <div class="check_group">
+                        <input class="order_check" type="checkbox" name=""/>
+                        <label>Check-out</label>
+                    </div>
+                    <div class="check_group">
+                        <input class="order_check" type="checkbox" name=""/>
+                        <label>Address</label>
+                    </div>
+                    <div class="check_group">
+                        <input class="order_check" type="checkbox" name=""/>
+                        <label>Phone</label>
+                    </div>
+                    <div class="check_group">
+                        <input class="order_check" type="checkbox" name=""/>
+                        <label>Emaill</label>
+                    </div>
+                    <div class="check_group">
+                        <input class="order_check" type="checkbox" name=""/>
+                        <label>Status</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped mt-3 bg-light">
+            <thead>
+            <tr>
+                <th scope="col">Customer</th>
+                <th scope="col">Product List</th>
+                <th scope="col">Total</th>
+                <th scope="col">Add to Cart</th>
+                <th scope="col">Check-out</th>
+                <th scope="col" width="20%">Address</th>
+                <th scope="col">Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <input class="order_check mr-2" type="checkbox" name=""/>Ian Medina
+                </td>
+                <td>
+                    <div class="pd">
+                        <h6>Vestibulum</h6>
+                        <div class="d-flex justify-content-between">
+                            <p>$1,400</p><small>1</small>
+                        </div>
+                    </div>
+                    <div class="pd">
+                        <h6>Fusce vehicu</h6>
+                        <div class="d-flex justify-content-between">
+                            <p>$800</p><small>1</small>
+                        </div>
+                    </div>
+                </td>
+                <td>$2,200</td>
+                <td>2018/6/8 <br> 13:39</td>
+                <td>2018/6/8 <br> 20:23</td>
+                <td>386 Windler Drives Apt. 358</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PAID</button>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Paid</a><a class="dropdown-item" href="#">Unpaid</a><a class="dropdown-item" href="#">Shipping</a><a class="dropdown-item" href="#">Done</a></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="order_check mr-2" type="checkbox" name=""/>Ian Medina
+                </td>
+                <td>
+                    <div class="pd">
+                        <h6>Vestibulum</h6>
+                        <div class="d-flex justify-content-between">
+                            <p>$1,400</p><small>1</small>
+                        </div>
+                    </div>
+                    <div class="pd">
+                        <h6>Fusce vehicu</h6>
+                        <div class="d-flex justify-content-between">
+                            <p>$800</p><small>1</small>
+                        </div>
+                    </div>
+                </td>
+                <td>$2,200</td>
+                <td>2018/6/8 <br> 13:39</td>
+                <td>2018/6/8 <br> 20:23</td>
+                <td>386 Windler Drives Apt. 358</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PAID</button>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Paid</a><a class="dropdown-item" href="#">Unpaid</a><a class="dropdown-item" href="#">Shipping</a><a class="dropdown-item" href="#">Done</a></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="order_check mr-2" type="checkbox" name=""/>Ian Medina
+                </td>
+                <td>
+                    <div class="pd">
+                        <h6>Vestibulum</h6>
+                        <div class="d-flex justify-content-between">
+                            <p>$1,400</p><small>1</small>
+                        </div>
+                    </div>
+                    <div class="pd">
+                        <h6>Fusce vehicu</h6>
+                        <div class="d-flex justify-content-between">
+                            <p>$800</p><small>1</small>
+                        </div>
+                    </div>
+                </td>
+                <td>$2,200</td>
+                <td>2018/6/8 <br> 13:39</td>
+                <td>2018/6/8 <br> 20:23</td>
+                <td>386 Windler Drives Apt. 358</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PAID</button>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Paid</a><a class="dropdown-item" href="#">Unpaid</a><a class="dropdown-item" href="#">Shipping</a><a class="dropdown-item" href="#">Done</a></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="order_check mr-2" type="checkbox" name=""/>Ian Medina
+                </td>
+                <td>
+                    <div class="pd">
+                        <h6>Vestibulum</h6>
+                        <div class="d-flex justify-content-between">
+                            <p>$1,400</p><small>1</small>
+                        </div>
+                    </div>
+                    <div class="pd">
+                        <h6>Fusce vehicu</h6>
+                        <div class="d-flex justify-content-between">
+                            <p>$800</p><small>1</small>
+                        </div>
+                    </div>
+                </td>
+                <td>$2,200</td>
+                <td>2018/6/8 <br> 13:39</td>
+                <td>2018/6/8 <br> 20:23</td>
+                <td>386 Windler Drives Apt. 358</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PAID</button>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Paid</a><a class="dropdown-item" href="#">Unpaid</a><a class="dropdown-item" href="#">Shipping</a><a class="dropdown-item" href="#">Done</a></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="order_check mr-2" type="checkbox" name=""/>Ian Medina
+                </td>
+                <td>
+                    <div class="pd">
+                        <h6>Vestibulum</h6>
+                        <div class="d-flex justify-content-between">
+                            <p>$1,400</p><small>1</small>
+                        </div>
+                    </div>
+                    <div class="pd">
+                        <h6>Fusce vehicu</h6>
+                        <div class="d-flex justify-content-between">
+                            <p>$800</p><small>1</small>
+                        </div>
+                    </div>
+                </td>
+                <td>$2,200</td>
+                <td>2018/6/8 <br> 13:39</td>
+                <td>2018/6/8 <br> 20:23</td>
+                <td>386 Windler Drives Apt. 358</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PAID</button>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Paid</a><a class="dropdown-item" href="#">Unpaid</a><a class="dropdown-item" href="#">Shipping</a><a class="dropdown-item" href="#">Done</a></div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pagination justify-content-end">
+                <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="js_mainContent container mt-4 d-none" id="product">
+        <div class="d-flex align-items-center">
+            <input class="order_check ml-2" type="checkbox" name=""/>
+            <div class="dropdown show"><a class="dropdown-toggle ml-1" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#000"></a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="#">Select All</a><a class="dropdown-item" href="#">Unselect All</a><a class="dropdown-item" href="#">Published</a><a class="dropdown-item" href="#">Unpublished</a></div>
+            </div>
+            <div class="tip_wrapper ml-4"><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#000"><i class="fas fa-tags"></i></a>
+                <div class="dropdown-menu">
+                    <h6 class="dropdown-header">Change Status to…</h6><a class="dropdown-item" href="#">Published</a><a class="dropdown-item" href="#">Unpublished</a>
+                </div>
+            </div>
+            <div class="ml-auto">
+                <button class="btn btn-black" type="button" data-toggle="modal" data-target="#pdModal">ADD NEW PRODUCT<i class="fas fa-plus fa-sm ml-2"></i></button>
+            </div>
+        </div>
+        <table class="table table-striped mt-3 bg-light">
+            <thead>
+            <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Original</th>
+                <th scope="col">Discount</th>
+                <th scope="col">Size</th>
+                <th scope="col">Color</th>
+                <th scope="col">Inventory</th>
+                <th scope="col">Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <input class="order_check mr-2" type="checkbox" name=""/><img class="mr-2" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="30"/>Mauris non tem
+                </td>
+                <td>$3,200</td>
+                <td>$2,800</td>
+                <td class="pr-5" colspan="3">
+                    <div class="pd d-flex justify-content-between">
+                        <h6>L</h6>
+                        <h6>Gray <br> Black</h6>
+                        <h6>15 <br> 20</h6>
+                    </div>
+                    <div class="pd d-flex justify-content-between">
+                        <h6>M</h6>
+                        <h6>Gray <br> Black</h6>
+                        <h6>15 <br> 20</h6>
+                    </div>
+                    <div class="pd d-flex justify-content-between">
+                        <h6>S</h6>
+                        <h6>Gray <br> Black</h6>
+                        <h6>15 <br> 20</h6>
+                    </div>
+                </td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PUBLISHED</button>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Published</a><a class="dropdown-item" href="#">Unpublished</a></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="order_check mr-2" type="checkbox" name=""/><img class="mr-2" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="30"/>Mauris non tem
+                </td>
+                <td>$3,200</td>
+                <td>$2,800</td>
+                <td class="pr-5" colspan="3">
+                    <div class="pd d-flex justify-content-between">
+                        <h6>L</h6>
+                        <h6>Gray <br> Black</h6>
+                        <h6>15 <br> 20</h6>
+                    </div>
+                    <div class="pd d-flex justify-content-between">
+                        <h6>M</h6>
+                        <h6>Gray <br> Black</h6>
+                        <h6>15 <br> 20</h6>
+                    </div>
+                    <div class="pd d-flex justify-content-between">
+                        <h6>S</h6>
+                        <h6>Gray <br> Black</h6>
+                        <h6>15 <br> 20</h6>
+                    </div>
+                </td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PUBLISHED</button>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Published</a><a class="dropdown-item" href="#">Unpublished</a></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="order_check mr-2" type="checkbox" name=""/><img class="mr-2" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="30"/>Mauris non tem
+                </td>
+                <td>$3,200</td>
+                <td>$2,800</td>
+                <td class="pr-5" colspan="3">
+                    <div class="pd d-flex justify-content-between">
+                        <h6>L</h6>
+                        <h6>Gray <br> Black</h6>
+                        <h6>15 <br> 20</h6>
+                    </div>
+                    <div class="pd d-flex justify-content-between">
+                        <h6>M</h6>
+                        <h6>Gray <br> Black</h6>
+                        <h6>15 <br> 20</h6>
+                    </div>
+                    <div class="pd d-flex justify-content-between">
+                        <h6>S</h6>
+                        <h6>Gray <br> Black</h6>
+                        <h6>15 <br> 20</h6>
+                    </div>
+                </td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PUBLISHED</button>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Published</a><a class="dropdown-item" href="#">Unpublished</a></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="order_check mr-2" type="checkbox" name=""/><img class="mr-2" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="30"/>Mauris non tem
+                </td>
+                <td>$3,200</td>
+                <td>$2,800</td>
+                <td class="pr-5" colspan="3">
+                    <div class="pd d-flex justify-content-between">
+                        <h6>L</h6>
+                        <h6>Gray <br> Black</h6>
+                        <h6>15 <br> 20</h6>
+                    </div>
+                    <div class="pd d-flex justify-content-between">
+                        <h6>M</h6>
+                        <h6>Gray <br> Black</h6>
+                        <h6>15 <br> 20</h6>
+                    </div>
+                    <div class="pd d-flex justify-content-between">
+                        <h6>S</h6>
+                        <h6>Gray <br> Black</h6>
+                        <h6>15 <br> 20</h6>
+                    </div>
+                </td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PUBLISHED</button>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Published</a><a class="dropdown-item" href="#">Unpublished</a></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class="order_check mr-2" type="checkbox" name=""/><img class="mr-2" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="30"/>Mauris non tem
+                </td>
+                <td>$3,200</td>
+                <td>$2,800</td>
+                <td class="pr-5" colspan="3">
+                    <div class="pd d-flex justify-content-between">
+                        <h6>L</h6>
+                        <h6>Gray <br> Black</h6>
+                        <h6>15 <br> 20</h6>
+                    </div>
+                    <div class="pd d-flex justify-content-between">
+                        <h6>M</h6>
+                        <h6>Gray <br> Black</h6>
+                        <h6>15 <br> 20</h6>
+                    </div>
+                    <div class="pd d-flex justify-content-between">
+                        <h6>S</h6>
+                        <h6>Gray <br> Black</h6>
+                        <h6>15 <br> 20</h6>
+                    </div>
+                </td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PUBLISHED</button>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Published</a><a class="dropdown-item" href="#">Unpublished</a></div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pagination justify-content-end">
+                <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+            </ul>
+        </nav>
+        <div class="modal fade" id="pdModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-black">
+                        <h5 class="modal-title text-white">ADD NEW PRODUCT</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body row">
+                        <div class="col-lg-6">
+                            <button class="btn btn-light btn-block"><i class="fas fa-cloud-upload-alt fa-3x"></i>
+                                <h6>Drag an image or click here to upload...</h6>
+                            </button>
+                            <div class="d-flex flex-wrap align-items-start"><img class="p-2" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="100"/><img class="p-2" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="100"/><img class="p-2" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="100"/><img class="p-2" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="100"/><img class="p-2" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="100"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-3 mt-lg-0">
+                            <form>
+                                <h5>Product Discription</h5>
+                                <div class="form-group">
+                                    <input class="form-control" type="email" value="Vestibulum nec"/>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" name="" cols="49" rows="5">Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus.</textarea>
+                                </div>
+                                <h5 class="font-weight-bold">Price</h5>
+                                <div class="d-flex">
+                                    <div class="input-group input-group-sm mb-3 mr-2">
+                                        <div class="input-group-prepend"><span class="input-group-text">Original</span></div>
+                                        <input class="form-control" type="text" value="$3,200"/>
+                                    </div>
+                                    <div class="input-group input-group-sm mb-3">
+                                        <div class="input-group-prepend"><span class="input-group-text">Discount</span></div>
+                                        <input class="form-control" type="text" value="$2,800"/>
+                                    </div>
+                                </div>
+                                <h5 class="font-weight-bold">Specification</h5>
+                                <div class="d-flex">
+                                    <div class="input-group input-group-sm mb-2 mr-2">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text">Size</label>
+                                        </div>
+                                        <select class="custom-select">
+                                            <option value="L">L</option>
+                                            <option value="M">M</option>
+                                            <option value="S">S</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group input-group-sm mb-2 mr-2">
+                                        <div class="input-group-prepend"><span class="input-group-text">Color</span></div>
+                                        <input class="form-control" type="text" value="Gray"/>
+                                    </div>
+                                    <div class="input-group input-group-sm mb-2">
+                                        <div class="input-group-prepend"><span class="input-group-text">Inventory</span></div>
+                                        <input class="form-control" type="text" value="15"/>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="input-group input-group-sm mb-2 mr-2">
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text">Size</label>
+                                        </div>
+                                        <select class="custom-select">
+                                            <option value="L">L</option>
+                                            <option value="M">M</option>
+                                            <option value="S">S</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group input-group-sm mb-2 mr-2">
+                                        <div class="input-group-prepend"><span class="input-group-text">Color</span></div>
+                                        <input class="form-control" type="text" value="Gray"/>
+                                    </div>
+                                    <div class="input-group input-group-sm mb-2">
+                                        <div class="input-group-prepend"><span class="input-group-text">Inventory</span></div>
+                                        <input class="form-control" type="text" value="15"/>
+                                    </div>
+                                </div>
+                                <button class="btn btn-black btn-block">ADD NEW SPECIFICATION<i class="fas fa-plus fa-sm ml-2"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-light font-weight-bold" type="button">SAVE DRAFT</button>
+                        <button class="btn btn-black font-weight-bold" type="button">PUBLISH</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer><i class="fas fa-pen-square"></i><span> Built by Steven Yu</span></footer>
+</body>
+
+<script src="./js/vendors.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.2/c3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="./source/js/admin-order.js"></script>
+<script src="./source/js/c3.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+</html>

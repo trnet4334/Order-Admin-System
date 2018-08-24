@@ -1,0 +1,230 @@
+body {
+    background-color: #f2f2f2;
+}
+
+/* Bootstrap customized */
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #fff;
+    background-color: #000;
+}
+
+.dropdown-menu {
+    border: 0;
+    box-shadow: 1px 2px 10px 0 #9b9b9b;
+}
+
+.card {
+    box-shadow: 0 0 10px 5px #ebebeb;
+    border: 0;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.page-link {
+    color: #000;
+}
+
+.page-link:hover {
+    color: #000;
+}
+
+.page-item.active .page-link {
+    background-color: #000;
+    border-color: #000;
+}
+
+/* Navbar setting */
+.nav-item {
+    position: relative;
+}
+
+.nav-item.active:before {
+    position: absolute;
+    display: block;
+    content: '';
+    bottom: -8px;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+}
+
+.date_select span {
+    color: #f2f2f2;
+    font-weight: bold;
+}
+
+.date_select .dropdown-toggle {
+    color: #f2f2f2;
+    font-weight: bold;
+}
+
+.date_select .dropdown-toggle:after {
+    color: #fff;
+}
+
+/* Chart settings */
+.tip_revenue, .tip_cost, .tip_income {
+    padding: 5px;
+    color: #fff;
+    background-color: #7ed321;
+    border-radius: 2px;
+}
+
+.tip_cost {
+    background-color: #d0021b;
+}
+
+.tip_income {
+    background-color: #4a90e2;
+}
+
+.c3-axis {
+    fill: #f2f2f2;
+}
+
+.c3 path, .tick line {
+    stroke: none;
+}
+
+/* Transaction website */
+.lists_group span {
+    font-weight: bold;
+}
+
+.lists_group .text_gray {
+    color: #f2f2f2;
+}
+
+.lists_group .text_black {
+    color: #000;
+    font-size: 20px;
+}
+
+.lists_group .success {
+    color: #7ed321;
+}
+
+.lists_group li+li {
+    border-top: 1px solid #ebebeb;
+}
+
+.tip_wrapper {
+    position: relative;
+    cursor: pointer;
+}
+
+.tip_wrapper .tip {
+    display: none;
+    min-width: 180px;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: normal;
+}
+
+.tip_wrapper .tip .success {
+    font-size: 18px;
+}
+
+.tip_wrapper .tip small {
+    font-style: italic;
+    color: #f2f2f2;
+}
+
+.tip_wrapper:hover .tip, .tip_wrapper:focus .tip {
+    position: absolute;
+    top: -70px;
+    left: -70px;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    color: #fff;
+    z-index: 1;
+}
+
+.tip_wrapper:hover .tip:before, .tip_wrapper:focus .tip:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #000000 transparent transparent transparent;
+}
+
+/* Order section settings */
+.order_info {
+    padding: 10px;
+}
+
+.order_info .time, .order_info .buyer {
+    color: #f2f2f2;
+}
+
+.order_check {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.order_check:checked {
+    background-color: #000;
+}
+
+.order_check:checked:before {
+    position: absolute;
+    color: #fff;
+    content: '\f00c';
+    /*font-family: 'Font Awesome 5 Free';*/
+    font-weight: 900;
+    font-size: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pd {
+    padding: 5px 0;
+}
+
+.pd p {
+    margin-bottom: 0;
+    color: #f2f2f2;
+}
+
+.pd+.pd {
+    border-top: 1px solid #fff;
+}
+
+footer {
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    color: #f2f2f2;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 991.98px) {
+    .nav-item.active:before {
+        bottom: 0;
+        height: 3px;
+    }
+    #navbar h6 {
+        display: none;
+    }
+}
+
