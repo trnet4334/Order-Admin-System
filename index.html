@@ -51,7 +51,7 @@
             <div class="date_select d-flex align-items-center">
                 <span>2018/06/18</span><i class="fas fa-caret-right px-2"></i><span>2018/06/24</span>
                 <a class="dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" style="color: #000;" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Period
                     </a>
                     <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink">
@@ -69,7 +69,7 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <h6 class="card-title"><i class="fas fa-hand-holding-usd mr-2"></i>TOTAL REVENUE</h6>
-                        <p class="card-text text-gogreen">54,540</p>
+                        <p class="card-text" style="color: #7ed321;">54,540</p>
                     </div>
                 </div>
             </div>
@@ -174,7 +174,11 @@
             </div>
             <div class="tip_wrapper ml-4"><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#000"><i class="fas fa-tags"></i></a>
                 <div class="dropdown-menu">
-                    <h6 class="dropdown-header">Change Status</h6><a class="dropdown-item" href="#">Paid</a><a class="dropdown-item" href="#">Unpaid</a><a class="dropdown-item" href="#">Shipping</a><a class="dropdown-item" href="#">Done</a>
+                    <h6 class="dropdown-header">Change Status</h6>
+                    <a class="dropdown-item" href="#">Paid</a>
+                    <a class="dropdown-item" href="#">Unpaid</a>
+                    <a class="dropdown-item" href="#">Shipping</a>
+                    <a class="dropdown-item" href="#">Done</a>
                 </div>
             </div>
             <div class="ml-auto"><a class="dropdown-toggle font-weight-bold" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#000">EDIT SECTION</a>
@@ -213,7 +217,7 @@
                     </div>
                     <div class="check_group">
                         <input class="order_check" type="checkbox" name=""/>
-                        <label>Emaill</label>
+                        <label>Email</label>
                     </div>
                     <div class="check_group">
                         <input class="order_check" type="checkbox" name=""/>
@@ -258,9 +262,14 @@
                 <td>2018/6/8 <br> 20:23</td>
                 <td>386 Windler Drives Apt. 358</td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PAID</button>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Paid</a><a class="dropdown-item" href="#">Unpaid</a><a class="dropdown-item" href="#">Shipping</a><a class="dropdown-item" href="#">Done</a></div>
+                    <div class="input-group mb-3 order_status_btn">
+                        <select class="custom-select">
+                            <option selected>Choose</option>
+                            <option value="1">Paid</option>
+                            <option value="2">Unpaid</option>
+                            <option value="3">Shipping</option>
+                            <option value="4">Completed</option>
+                        </select>
                     </div>
                 </td>
             </tr>
@@ -287,9 +296,14 @@
                 <td>2018/6/8 <br> 20:23</td>
                 <td>386 Windler Drives Apt. 358</td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PAID</button>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Paid</a><a class="dropdown-item" href="#">Unpaid</a><a class="dropdown-item" href="#">Shipping</a><a class="dropdown-item" href="#">Done</a></div>
+                    <div class="input-group mb-3 order_status_btn">
+                        <select class="custom-select">
+                            <option selected>Choose</option>
+                            <option value="1">Paid</option>
+                            <option value="2">Unpaid</option>
+                            <option value="3">Shipping</option>
+                            <option value="4">Completed</option>
+                        </select>
                     </div>
                 </td>
             </tr>
@@ -316,9 +330,14 @@
                 <td>2018/6/8 <br> 20:23</td>
                 <td>386 Windler Drives Apt. 358</td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PAID</button>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Paid</a><a class="dropdown-item" href="#">Unpaid</a><a class="dropdown-item" href="#">Shipping</a><a class="dropdown-item" href="#">Done</a></div>
+                    <div class="input-group mb-3 order_status_btn">
+                        <select class="custom-select">
+                            <option selected>Choose</option>
+                            <option value="1">Paid</option>
+                            <option value="2">Unpaid</option>
+                            <option value="3">Shipping</option>
+                            <option value="4">Completed</option>
+                        </select>
                     </div>
                 </td>
             </tr>
@@ -345,9 +364,14 @@
                 <td>2018/6/8 <br> 20:23</td>
                 <td>386 Windler Drives Apt. 358</td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PAID</button>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Paid</a><a class="dropdown-item" href="#">Unpaid</a><a class="dropdown-item" href="#">Shipping</a><a class="dropdown-item" href="#">Done</a></div>
+                    <div class="input-group mb-3 order_status_btn">
+                        <select class="custom-select">
+                            <option selected>Choose</option>
+                            <option value="1">Paid</option>
+                            <option value="2">Unpaid</option>
+                            <option value="3">Shipping</option>
+                            <option value="4">Completed</option>
+                        </select>
                     </div>
                 </td>
             </tr>
@@ -374,9 +398,14 @@
                 <td>2018/6/8 <br> 20:23</td>
                 <td>386 Windler Drives Apt. 358</td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PAID</button>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Paid</a><a class="dropdown-item" href="#">Unpaid</a><a class="dropdown-item" href="#">Shipping</a><a class="dropdown-item" href="#">Done</a></div>
+                    <div class="input-group mb-3 order_status_btn">
+                        <select class="custom-select">
+                            <option selected>Choose</option>
+                            <option value="1">Paid</option>
+                            <option value="2">Unpaid</option>
+                            <option value="3">Shipping</option>
+                            <option value="4">Completed</option>
+                        </select>
                     </div>
                 </td>
             </tr>
@@ -384,13 +413,13 @@
         </table>
         <nav>
             <ul class="pagination justify-content-end">
-                <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true"><<</span></a></li>
                 <li class="page-item active"><a class="page-link" href="#">1</a></li>
                 <li class="page-item"><a class="page-link" href="#">2</a></li>
                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                 <li class="page-item"><a class="page-link" href="#">4</a></li>
                 <li class="page-item"><a class="page-link" href="#">5</a></li>
-                <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">>></span></a></li>
             </ul>
         </nav>
     </div>
@@ -399,11 +428,18 @@
         <div class="d-flex align-items-center">
             <input class="order_check ml-2" type="checkbox" name=""/>
             <div class="dropdown show"><a class="dropdown-toggle ml-1" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#000"></a>
-                <div class="dropdown-menu"><a class="dropdown-item" href="#">Select All</a><a class="dropdown-item" href="#">Unselect All</a><a class="dropdown-item" href="#">Published</a><a class="dropdown-item" href="#">Unpublished</a></div>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Select All</a>
+                    <a class="dropdown-item" href="#">Unselect All</a>
+                    <a class="dropdown-item" href="#">Published</a>
+                    <a class="dropdown-item" href="#">Unpublished</a>
+                </div>
             </div>
             <div class="tip_wrapper ml-4"><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#000"><i class="fas fa-tags"></i></a>
                 <div class="dropdown-menu">
-                    <h6 class="dropdown-header">Change Status to…</h6><a class="dropdown-item" href="#">Published</a><a class="dropdown-item" href="#">Unpublished</a>
+                    <h6 class="dropdown-header">Change Status to...</h6>
+                    <a class="dropdown-item" href="#">Published</a>
+                    <a class="dropdown-item" href="#">Unpublished</a>
                 </div>
             </div>
             <div class="ml-auto">
@@ -447,9 +483,12 @@
                     </div>
                 </td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PUBLISHED</button>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Published</a><a class="dropdown-item" href="#">Unpublished</a></div>
+                    <div class="input-group mb-3 order_status_btn">
+                        <select class="custom-select">
+                            <option selected>Choose</option>
+                            <option value="1">Published</option>
+                            <option value="2">Unpublished</option>
+                        </select>
                     </div>
                 </td>
             </tr>
@@ -477,9 +516,12 @@
                     </div>
                 </td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PUBLISHED</button>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Published</a><a class="dropdown-item" href="#">Unpublished</a></div>
+                    <div class="input-group mb-3 order_status_btn">
+                        <select class="custom-select">
+                            <option selected>Choose</option>
+                            <option value="1">Published</option>
+                            <option value="2">Unpublished</option>
+                        </select>
                     </div>
                 </td>
             </tr>
@@ -507,9 +549,12 @@
                     </div>
                 </td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PUBLISHED</button>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Published</a><a class="dropdown-item" href="#">Unpublished</a></div>
+                    <div class="input-group mb-3 order_status_btn">
+                        <select class="custom-select">
+                            <option selected>Choose</option>
+                            <option value="1">Published</option>
+                            <option value="2">Unpublished</option>
+                        </select>
                     </div>
                 </td>
             </tr>
@@ -537,9 +582,12 @@
                     </div>
                 </td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PUBLISHED</button>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Published</a><a class="dropdown-item" href="#">Unpublished</a></div>
+                    <div class="input-group mb-3 order_status_btn">
+                        <select class="custom-select">
+                            <option selected>Choose</option>
+                            <option value="1">Published</option>
+                            <option value="2">Unpublished</option>
+                        </select>
                     </div>
                 </td>
             </tr>
@@ -567,9 +615,12 @@
                     </div>
                 </td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-gogreen text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PUBLISHED</button>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Published</a><a class="dropdown-item" href="#">Unpublished</a></div>
+                    <div class="input-group mb-3 order_status_btn">
+                        <select class="custom-select">
+                            <option selected>Choose</option>
+                            <option value="1">Published</option>
+                            <option value="2">Unpublished</option>
+                        </select>
                     </div>
                 </td>
             </tr>
@@ -577,27 +628,34 @@
         </table>
         <nav>
             <ul class="pagination justify-content-end">
-                <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true"><<</span></a></li>
                 <li class="page-item active"><a class="page-link" href="#">1</a></li>
                 <li class="page-item"><a class="page-link" href="#">2</a></li>
                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                 <li class="page-item"><a class="page-link" href="#">4</a></li>
                 <li class="page-item"><a class="page-link" href="#">5</a></li>
-                <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">>></span></a></li>
             </ul>
         </nav>
+        <!-- Product modal -->
         <div class="modal fade" id="pdModal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-black">
                         <h5 class="modal-title text-white">ADD NEW PRODUCT</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"> X </span></button>
                     </div>
                     <div class="modal-body row">
                         <div class="col-lg-6">
-                            <button class="btn btn-light btn-block"><i class="fas fa-cloud-upload-alt fa-3x"></i>
-                                <h6>Drag an image or click here to upload...</h6>
-                            </button>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="imageFile" aria-describedby="imageFileAddon" style="height: 30%;">
+                                    <label for="imageFile" class="custom-file-label"> Upload product's photos </label>
+                                </div>
+                            </div>
+                            <!--<button class="btn btn-light btn-block"><i class="fas fa-cloud-upload-alt fa-3x"></i>-->
+                                <!--<h6>Drag an image or click here to upload...</h6>-->
+                            <!--</button>-->
                             <div class="d-flex flex-wrap align-items-start"><img class="p-2" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="100"/><img class="p-2" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="100"/><img class="p-2" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="100"/><img class="p-2" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="100"/><img class="p-2" src="https://scene7.zumiez.com/is/image/zumiez/pdp_hero/adidas-Trefoil-White-T-Shirt-_289236-front-US.jpg" width="100"/>
                             </div>
                         </div>
@@ -605,10 +663,10 @@
                             <form>
                                 <h5>Product Discription</h5>
                                 <div class="form-group">
-                                    <input class="form-control" type="email" value="Vestibulum nec"/>
+                                    <input class="form-control" type="email" placeholder="Product's name"/>
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" name="" cols="49" rows="5">Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus.</textarea>
+                                    <textarea class="form-control" name="" cols="49" rows="5" placeholder="Product's description"></textarea>
                                 </div>
                                 <h5 class="font-weight-bold">Price</h5>
                                 <div class="d-flex">
@@ -623,41 +681,41 @@
                                 </div>
                                 <h5 class="font-weight-bold">Specification</h5>
                                 <div class="d-flex">
-                                    <div class="input-group input-group-sm mb-2 mr-2">
+                                    <div class="input-group mb-3 mr-3">
                                         <div class="input-group-prepend">
-                                            <label class="input-group-text">Size</label>
+                                            <label class="input-group-text" for="sizeGroupSelect01">Size</label>
                                         </div>
-                                        <select class="custom-select">
+                                        <select class="custom-select" id="sizeGroupSelect01">
                                             <option value="L">L</option>
                                             <option value="M">M</option>
                                             <option value="S">S</option>
                                         </select>
                                     </div>
-                                    <div class="input-group input-group-sm mb-2 mr-2">
+                                    <div class="input-group input-group-sm mb-2 mr-2 mt-1">
                                         <div class="input-group-prepend"><span class="input-group-text">Color</span></div>
                                         <input class="form-control" type="text" value="Gray"/>
                                     </div>
-                                    <div class="input-group input-group-sm mb-2">
+                                    <div class="input-group input-group-sm mb-2 mt-1">
                                         <div class="input-group-prepend"><span class="input-group-text">Inventory</span></div>
                                         <input class="form-control" type="text" value="15"/>
                                     </div>
                                 </div>
                                 <div class="d-flex">
-                                    <div class="input-group input-group-sm mb-2 mr-2">
+                                    <div class="input-group mb-3 mr-3">
                                         <div class="input-group-prepend">
-                                            <label class="input-group-text">Size</label>
+                                            <label class="input-group-text" for="sizeGroupSelect02">Size</label>
                                         </div>
-                                        <select class="custom-select">
+                                        <select class="custom-select" id="sizeGroupSelect02">
                                             <option value="L">L</option>
                                             <option value="M">M</option>
                                             <option value="S">S</option>
                                         </select>
                                     </div>
-                                    <div class="input-group input-group-sm mb-2 mr-2">
+                                    <div class="input-group input-group-sm mb-2 mr-2 mt-1">
                                         <div class="input-group-prepend"><span class="input-group-text">Color</span></div>
                                         <input class="form-control" type="text" value="Gray"/>
                                     </div>
-                                    <div class="input-group input-group-sm mb-2">
+                                    <div class="input-group input-group-sm mb-2 mt-1">
                                         <div class="input-group-prepend"><span class="input-group-text">Inventory</span></div>
                                         <input class="form-control" type="text" value="15"/>
                                     </div>
@@ -681,7 +739,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.2/c3.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="./source/js/admin-order.js"></script>
